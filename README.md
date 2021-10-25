@@ -10,23 +10,13 @@ When the user selects a recipe the application should display on the same screen
 - [x] Display ingredients as a list;
 - [x] Cooking instructions;
 
-## Requirements
-
-Every framework and architectural decision needs to be explained and defended on a README file.
-The project is expected to be delivered as a GitHub repository URL or a zip file.
-All these requirements needs to be satisfied:
-- [x] Application must be production ready;
-- [x] UI application must be implemented using JavaScript;
-- [x] UI application must be a single‐page web application (containing the details mentioned above);
-- [x] REST application must be implemented using Java;
-- [x] Data must be persisted in an embedded database;
-- [x] Use any frameworks of your choice for REST and UI applications;
-- [ ] Write tests that cover REST and UI applications;
-- [ ] Describe at least 10 testing scenarios using GivenWhenThen style;
-
-## Bonus
-
-- [ ] REST application should be secured by implementing authentication process (please provide credentials);
-- [ ] Application should have an API documentation;
-- [ ] Write automation tests for the described testing scenarios; (item 8)
-- [ ] UI application should be responsive and mobile friendly;
+## Design decision
+1. Data can be stored as key-value pair , from an API prospective key-value pair are very NonSQL data stores so have choosen the MongoDB
+2. Simple Spring API with persistance model for persitance layer
+3. Angular UI aplication
+4. Docker has choosen the right container to prepare the image and run on container
+## Steps can be followed to run on local 
+1. Install the Docker desktop which intern contain Docker enginer and Docker compose
+2. To make sure code is compiled and build run the docker-compose build (-d in case if want to run at backgroud)
+3. To compose/run the container image run the docker-compose up (-d in case if want to run at backgroud)
+4. To force build while run running to consider the recent changes docker-compose up --build (Force build)

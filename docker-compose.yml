@@ -7,6 +7,6 @@ services:
   frontend:
     build: './abnamro-recipes-frontend'
     depends_on:
-      - "backend"
+      - backend
     ports: 
       - "80:80"
